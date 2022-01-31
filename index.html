@@ -9,16 +9,16 @@
     <!-- Шапка сайта -->
     <header class="page-header">
       <!-- Логотип -->
-      <img class="logo" src="" alt="Логотип Седоны">
+      <a class="page-header-logo" href="index.html"><img src="logo-Sedona" alt="Логотип Седоны"></a>
       <!-- Меню -->
       <nav class="navigation">
         <!-- Меню сайта -->
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-list" href="main.html">Главная</a>
+            <a class="navigation-list" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-list" href="about.html">О Седоне</a>
+            <a class="navigation-list" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-list" href="hotels.html">Гостиницы</a>
@@ -39,7 +39,7 @@
           </li>
           <li class="navigation-item">
             <a class="navigation-list" href="#">
-              <span class="visually-hidden">Хочу сюда!</span>
+              Хочу сюда!
             </a>
           </li>
         </ul>
@@ -53,9 +53,9 @@
 
       <!-- Преимущества -->
       <section class="advantages">
-        <h2 class="advantages-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-        <p class="advantages-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
-        <ul class="advantages-list">
+        <p class="advantages-description"><b>Седона — небольшой городок в Аризоне, заслуживающий большего!</b></p>
+        <h2 class="advantages-title">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</h2>
+        <ol class="advantages-list">
           <li class="advantages-item">
             <h3 class="advantages-item-title">Настоящий городок</h3>
             <img class="advantages-item-photo-1" src="" alt="городок Седона" >
@@ -101,7 +101,7 @@
             <p class="advantages-item-number">— №5 —</p>
             <p class="advantages-item-description">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
-        </ul>
+        </ol>
       </section>
 
       <!-- Поиск гостиницы -->
@@ -115,7 +115,7 @@
       <!-- Подписка -->
       <section class="subscription">
         <h2 class="visually-hidden">Подписка</h2>
-        <span class="subscription-signature"><b>Подпишитесь на рассылку</b></span>
+        <p class="subscription-signature"><b>Подпишитесь на рассылку</b></p>
         <p class="subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="field" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email" required>
@@ -147,17 +147,19 @@
           </li>
         </ul>
       </section>
-      <!-- Контакт -->
-      <section class="footer-contact">
-        <h2 class="visually-hidden">Контакт</h2>
-          <address class="footer-contact-address">
-          <a class="footer-contact-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
-        </address>
+        <!-- Контакт -->
+          <div class="footer-contact">
+            <span class="visually-hidden">Контакт</span>
+            <address class="footer-contact-address">
+              <a class="footer-contact-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
+            </address>
+         </div>
         <!-- Логотип htmlacademy-->
-      </section>
-      <section class="footer-logo">
-        <a class="footer-contact-logo" href="https://htmlacademy.ru" alt="Логотип htmlacademy">.html<br>academy</a>
-      </section>
+        <div class="footer-logo">
+          <a class="footer-contact-logo" href="https://htmlacademy.ru">
+            <img src="logo-htmlacademy" alt="Логотип htmlacademy">
+          </a>
+        </div>
     </footer>
   </body>
 </html>
