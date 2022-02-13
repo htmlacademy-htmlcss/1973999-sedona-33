@@ -1,0 +1,404 @@
+@font-face {
+ font-family: "PT Sans";
+ font-style: normal;
+ font-weight: 400;
+ src: url("../fonts/ptsans-400.woff2") format("woff2");
+ font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+/* Зададим общий стиль страниц */
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  background-color: #E5E5E5;
+}
+
+/* index.html */
+
+/* Шапка сайта*/
+.page-header {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+/* Текст навигации */
+.navigation-link {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Ссылка в виде кнопки */
+.navigation-button {
+  line-height: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #756257;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* Множественный фон в блоке */
+.main-index {
+  background-image: url("../images/divider.svg"), url("../images/index-background.jpg");
+  background-size: 1200px 57px, 1200px 485px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: top;
+  /* добавление bottom, top; для разделителя переносит его вниз страницы, потому что применяется ко всему main, не понимаю как сделать? */
+  color: #000000;
+  background-color: #E5E5E5;
+}
+
+/* Преимущества */
+.advantages {
+  text-align: center;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.advantages-description {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.advantages-title {
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #333333;
+  background-color: #FFFFFF;
+}
+
+.advantages-item h3 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.advantages-item-number {
+  color: #333333;
+}
+
+.advantages-item-description {
+  color: #333333;
+}
+
+.advantages-item:first-child,
+.advantages-item:nth-child(2) {
+  color: #FFFFFF;
+  background-color: #83B3D3;
+}
+
+.advantages-item:nth-child(3),
+.advantages-item:nth-child(5) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item:nth-child(4) {
+background-color: rgba(131, 179, 211, 0.2);
+}
+
+/* Сервис */
+.service-item {
+  /* Цвет непонятно как задавать из макета он смешанный (?) */
+  background-color: rgba(240, 246, 248, 0.123);
+
+}
+.service-item:nth-child(even) {
+background-color: #FFFFFF;
+}
+
+.service-item h4 {
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.service-item-description {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+}
+
+/* Поиск гостиницы */
+.search {
+  background-color: #FFFFFF;
+  text-align: center;
+}
+.search-interested {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+.search-description {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #333333;
+}
+.button-search {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #756257;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Подписка */
+.subscription {
+  color: #000000;
+  background-color: #E5E5E5;
+  background-image: url("../images/background.jpg");
+  background-size: 1200px 411px;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-bottom: 100px;
+}
+.subscription-signature {
+  color: #FFFFFF;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.subscription-description {
+  color: #FFFFFF;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.subscription-button {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Подвал сайта */
+.page-footer {
+  background-color: #ffffff;
+}
+.footer-contact-phone {
+  color: #000000;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  text-align: center;
+  font-style: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Каталог html */
+
+.main-inner {
+  background-image: url(../images/catalog-background.jpg);
+  background-repeat: no-repeat;
+  color: #000000;
+  background-color: #E5E5E5;
+  background-size: 1200px 408px;
+}
+
+.inner-header-title {
+  color: #FFFFFF;
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+}
+
+/* Хлебные крошки */
+.breadcrumbs-item {
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+/* Выбор гостиниц с фильтрами */
+/* Инфраструктура */
+.hotels-filter-title {
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+/* Тип жилья */
+.catalog-filter-title {
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.hotels-filter-item {
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+/* Кнопка - применить */
+.button-button-submit {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Кнопка - сбросить */
+.button-button-reset {
+  font-family: "PT Sans", sans-serif;
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+/* Сортировка гостиниц */
+.select-description {
+  color: #000000;
+  font-size: 30px;
+  line-height: 39px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.select-control {
+  color: #333333;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+.hotel-card-link {
+  text-decoration: none;
+}
+
+.hotel-card-title {
+  color: #000000;
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 700;
+}
+
+.hotel-card {
+  color: #333333;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+/* Подробнее */
+.button-more {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #756257;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* В избранное */
+.button-favorites {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button-infavorites {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #7DB54F;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Рейтинг */
+.rating {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  background-color: #F2F2F2;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Загрузить еще */
+.button-load {
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Пагинация */
+.hotel-page {
+  color: #333333;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+.pagination-link {
+  color: #ffffff;
+  background-color: #83B3D3;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.pagination-current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
