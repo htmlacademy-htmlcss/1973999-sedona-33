@@ -14,18 +14,12 @@
   font-display: swap;
 }
 
-html {
+.html {
   height: 100%;
-  margin-left: 40px;
-  margin-right: 40px;
 }
 
 /* Зададим общий стиль страниц */
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -41,21 +35,24 @@ body {
   background-color: #FFFFFF;
 }
 
-.navigation {
-  display: flex;
+/* Контент по центру */
+.page-container {
   width: 1200px;
   margin: 0 auto;
 }
 
+.navigation {
+  display: flex;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
 /* Левая часть навигации */
 .navigation-list {
-  margin: 0;
-  padding: 0;
   width: 460px;
 }
 
 .page-header-logo {
-  margin-left: 70px;
   margin-right: 47px;
 }
 
@@ -87,13 +84,7 @@ body {
 }
 
 .main-container {
-  flex-grow: 1;
-}
-
-/* Контент по центру */
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
+  /* flex-grow: 1; */
 }
 
 /* Надпись по центру */
@@ -124,7 +115,6 @@ body {
 /* Удаляем отступы у списка */
 .advantages-list {
   display: flex;
-  width: 1200px;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -300,18 +290,12 @@ background-color: #FFFFFF;
 /* Подвал сайта */
 .page-footer {
   background-color: #ffffff;
-}
-
-/* Обертка подвала */
-.page-footer-container {
-  display: flex;
-  width: 1200px;
-  margin: 0 auto;
+  padding-left: 72px;
+  padding-right: 72px;
 }
 
 .footer-social {
   width: 110px;
-  margin-left: 72px;
 }
 
 .footer-social-list {
@@ -338,7 +322,6 @@ background-color: #FFFFFF;
 
 .footer-logo {
   width: 115px;
-  margin-right: 72px;
 }
 
 /* catalog.html */
@@ -356,8 +339,6 @@ background-color: #FFFFFF;
 
 .hotels-filter {
   display: flex;
-  width: 1200px;
-  margin: 0 auto;
 }
 
 .inner-header-title {
