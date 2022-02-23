@@ -14,6 +14,10 @@
   font-display: swap;
 }
 
+.html {
+  height: 100%;
+}
+
 /* Зададим общий стиль страниц */
 body {
   font-family: "PT Sans", sans-serif;
@@ -29,6 +33,33 @@ body {
 .page-header {
   color: #000000;
   background-color: #FFFFFF;
+}
+
+/* Контент по центру */
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation {
+  display: flex;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+/* Левая часть навигации */
+.navigation-list {
+  width: 460px;
+}
+
+.page-header-logo {
+  margin-right: 47px;
+}
+
+/* Правая часть навигации */
+.navigation-user {
+  max-width: 350px;
+  margin-left: auto;
 }
 
 /* Текст навигации */
@@ -51,6 +82,17 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
+
+.main-container {
+  /* flex-grow: 1; */
+}
+
+/* Надпись по центру */
+.main-img {
+  display: block;
+  margin: 0 auto;
+}
+
 /* Множественный фон в блоке */
 .main-background {
   background-image: url("../images/divider.svg"), url("../images/index-background.jpg");
@@ -68,6 +110,23 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
+}
+
+/* Удаляем отступы у списка */
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-special {
+  display: flex;
+}
+
+/* Убираем отступ под изображением */
+.advantages-item-photo {
+  display: block;
 }
 
 .advantages-description {
@@ -99,6 +158,10 @@ body {
   background-color: #83B3D3;
 }
 
+.advantages-item-grey {
+  width: 400px;
+}
+
 .advantages-item-grey:nth-child(odd) {
   font-size: 18px;
   line-height: 21px;
@@ -124,7 +187,15 @@ body {
 }
 
 /* Сервис */
+/* Убираем отступы у сервиса */
+.service-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
 .service-item {
+  width: 400px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -152,6 +223,7 @@ background-color: #FFFFFF;
   background-color: #FFFFFF;
   text-align: center;
 }
+
 .search-interested {
   font-size: 30px;
   line-height: 36px;
@@ -159,12 +231,14 @@ background-color: #FFFFFF;
   color: #000000;
   text-transform: uppercase;
 }
+
 .search-description {
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
   color: #333333;
 }
+
 .button-search {
   font-size: 20px;
   line-height: 36px;
@@ -176,7 +250,7 @@ background-color: #FFFFFF;
 }
 
 /* Подписка */
-.subscription {
+.subscription-index {
   background-image: url("../images/background.jpg");
   background-size: 1200px 411px;
   color: #000000;
@@ -186,6 +260,7 @@ background-color: #FFFFFF;
   text-align: center;
   padding-bottom: 100px;
 }
+
 .subscription-signature {
   font-size: 30px;
   line-height: 36px;
@@ -193,12 +268,14 @@ background-color: #FFFFFF;
   color: #FFFFFF;
   text-transform: uppercase;
 }
+
 .subscription-description {
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
   color: #FFFFFF;
 }
+
 .subscription-button {
   font-family: inherit;
   font-size: 20px;
@@ -213,7 +290,25 @@ background-color: #FFFFFF;
 /* Подвал сайта */
 .page-footer {
   background-color: #ffffff;
+  padding-left: 72px;
+  padding-right: 72px;
 }
+
+.footer-social {
+  width: 110px;
+}
+
+.footer-social-list {
+  display: flex;
+  width: 120px;
+  margin-right: 29px;
+}
+
+.footer-contact {
+  width: 720px;
+  margin-left: 240px;
+}
+
 .footer-contact-phone {
   font-size: 40px;
   line-height: 40px;
@@ -223,6 +318,10 @@ background-color: #FFFFFF;
   font-style: normal;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.footer-logo {
+  width: 115px;
 }
 
 /* catalog.html */
@@ -236,6 +335,10 @@ background-color: #FFFFFF;
   background-image: url(../images/catalog-background.jpg);
   background-size: 1200px 408px;
   background-repeat: no-repeat;
+}
+
+.hotels-filter {
+  display: flex;
 }
 
 .inner-header-title {
@@ -256,10 +359,15 @@ background-color: #FFFFFF;
 /* Выбор гостиниц с фильтрами */
 /* Инфраструктура */
 .hotels-filter-title {
+  width: 150px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
   color: #FFFFFF;
+}
+
+.hotels-filter-list {
+  padding-left: 0px;
 }
 
 /* Тип жилья */
@@ -410,4 +518,30 @@ background-color: #FFFFFF;
 .pagination-current {
   color: #000000;
   background-color: #F2F2F2;
+}
+
+/* Подписка каталога */
+.subscription-catalog {
+  background-size: 1200px 411px;
+  color: #000000;
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.subscription-catalog-signature {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.subscription-catalog-description {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #333333;
 }
