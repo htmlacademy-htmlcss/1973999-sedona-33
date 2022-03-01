@@ -63,6 +63,7 @@ body {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 20px;
   width: 460px;
   list-style-type: none;
 }
@@ -79,8 +80,8 @@ body {
 
 /* Текст навигации */
 .navigation-link {
-  display: block;
-  padding: 20px 17px;
+  margin-top: 20px;
+  margin-right: 34px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -97,9 +98,9 @@ body {
 
 /* Ссылка в виде кнопки */
 .navigation-button {
-  display: flex;
+  display: block;
   margin-top: 14px;
-  margin-bottom: 19px;
+  margin-bottom: 14px;
   margin-right: 70px;
   padding: 9px 15px;
   line-height: 20px;
@@ -355,7 +356,7 @@ background-color: #FFFFFF;
 }
 
 /* Подвал сайта */
-.page-footer-container {
+.page-footer {
    display: flex;
   flex-wrap: wrap;
   background-color: #ffffff;
@@ -401,7 +402,7 @@ background-color: #FFFFFF;
 }
 
 .footer-logo {
-  padding-top: 42px;
+  margin-top: 42px;
 }
 
 /* catalog.html */
@@ -423,10 +424,13 @@ background-color: #FFFFFF;
   display: flex;
 }
 
-.inner-header-title {
-  margin: 0;
+.inner-header {
   padding-top: 35px;
-  padding-bottom: 5px;
+}
+
+.inner-header-title {
+  margin-top: 0;
+  margin-bottom: 5px;
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
@@ -514,6 +518,7 @@ background-color: #FFFFFF;
 
 /* Кнопка - сбросить */
 .button-button-reset {
+  margin-bottom: 83px;
   font-family: inherit;
   font-size: 18px;
   line-height: 23px;
@@ -662,8 +667,8 @@ background-color: #FFFFFF;
   box-sizing: border-box;
   margin-right: 8px;
   width:55px;
-  height: 55px;
-  /* не понял как отцентровать цифры внутри, по макету паддинги не измерить (в барбершопе отцентровано через паддинги) */
+  min-height: 55px;
+  padding: 15px 15px;
   text-align: center;
   font-size: 20px;
   line-height: 26px;
@@ -683,7 +688,8 @@ background-color: #FFFFFF;
 }
 
 .hotel-page {
-  margin-left: 300px;
+  margin-left: auto;
+  width: 386px;
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
@@ -692,8 +698,8 @@ background-color: #FFFFFF;
 
 .select-number-page {
   width: 160px;
+  margin-left: 51px;
   height: 48px;
-  /* Не понял как прижать сортировку к правому краю до 72рх (для всего контейнера задано же 72рх) */
 }
 
 /* Подписка каталога */
