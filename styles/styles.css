@@ -27,6 +27,18 @@ body {
   background-color: #F2F2F2;
 }
 
+/* Скрытие элементов со страницы */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* index.html */
 
 /* Шапка сайта*/
@@ -49,7 +61,11 @@ body {
 
 /* Левая часть навигации */
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
   width: 460px;
+  list-style-type: none;
 }
 
 .page-header-logo {
@@ -64,6 +80,8 @@ body {
 
 /* Текст навигации */
 .navigation-link {
+  margin-top: 20px;
+  margin-right: 34px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -73,8 +91,18 @@ body {
   text-decoration: none;
 }
 
+.navigation-list .navigation-user {
+  min-width: 18px;
+  min-height: 18px;
+}
+
 /* Ссылка в виде кнопки */
 .navigation-button {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  margin-right: 70px;
+  padding: 9px 15px;
   line-height: 20px;
   font-weight: 700;
   color: #FFFFFF;
@@ -91,6 +119,8 @@ body {
 .main-img {
   display: block;
   margin: 0 auto;
+  padding-top: 51px;
+  padding-bottom: 82px;
 }
 
 /* Множественный фон в блоке */
@@ -118,6 +148,7 @@ body {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .advantages-special {
@@ -130,6 +161,7 @@ body {
 }
 
 .advantages-description {
+  padding: 63px 240px 147px 240px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -139,6 +171,7 @@ body {
 }
 
 .advantages-title {
+  padding: 31px 240px 80px 240px;
   font-size: 22px;
   line-height: 36px;
   font-weight: 400;
@@ -153,6 +186,19 @@ body {
   text-transform: uppercase;
 }
 
+.advantages-item-title {
+  margin-top: 97px;
+  margin-bottom: 30px;
+}
+
+.advantages-item-number {
+  margin: 0;
+}
+
+.advantages-item-description {
+  margin: 30px 90px 87px 90px;
+}
+
 .advantages-special {
   color: #FFFFFF;
   background-color: #83B3D3;
@@ -160,6 +206,14 @@ body {
 
 .advantages-item-grey {
   width: 400px;
+}
+
+.advantages-item-grey-number {
+  margin: 0;
+}
+
+.advantages-item-grey-description {
+  margin: 30px 75px 108px 75px;
 }
 
 .advantages-item-grey:nth-child(odd) {
@@ -179,6 +233,8 @@ body {
 }
 
 .advantages-item-grey-title {
+  margin-top: 98px;
+  margin-bottom: 30px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -192,11 +248,16 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .service-item {
   width: 400px;
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.service-item-title {
+  margin: 184px 75px 20px 75px;
 }
 
 .service-item:nth-child(even) {
@@ -212,6 +273,7 @@ background-color: #FFFFFF;
 }
 
 .service-item-description {
+  margin: 0px 75px 79px 75px;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
@@ -220,6 +282,8 @@ background-color: #FFFFFF;
 
 /* Поиск гостиницы */
 .search {
+  padding-top: 91px;
+  padding-bottom: 93px;
   background-color: #FFFFFF;
   text-align: center;
 }
@@ -233,6 +297,7 @@ background-color: #FFFFFF;
 }
 
 .search-description {
+  margin: 29px 240px 56px 240px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
@@ -251,6 +316,7 @@ background-color: #FFFFFF;
 
 /* Подписка */
 .subscription-index {
+  padding: 94px 200px;
   background-image: url("../images/background.jpg");
   background-size: 1200px 411px;
   color: #000000;
@@ -270,6 +336,8 @@ background-color: #FFFFFF;
 }
 
 .subscription-description {
+  margin-top: 29px;
+  margin-bottom: 46px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
@@ -289,6 +357,8 @@ background-color: #FFFFFF;
 
 /* Подвал сайта */
 .page-footer {
+   display: flex;
+  flex-wrap: wrap;
   background-color: #ffffff;
   padding-left: 72px;
   padding-right: 72px;
@@ -300,13 +370,24 @@ background-color: #FFFFFF;
 
 .footer-social-list {
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   width: 120px;
-  margin-right: 29px;
+}
+
+.footer-social-item {
+  width: 20px;
+  height: 18px;
+  margin-right: 30px;
+}
+
+.footer-social-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .footer-contact {
-  width: 720px;
-  margin-left: 240px;
+  margin: 40px 240px 30px 240px;
 }
 
 .footer-contact-phone {
@@ -321,7 +402,7 @@ background-color: #FFFFFF;
 }
 
 .footer-logo {
-  width: 115px;
+  margin-top: 42px;
 }
 
 /* catalog.html */
@@ -332,6 +413,8 @@ background-color: #FFFFFF;
 }
 
 .inner-background {
+  padding-left: 72px;
+  padding-right: 72px;
   background-image: url(../images/catalog-background.jpg);
   background-size: 1200px 408px;
   background-repeat: no-repeat;
@@ -341,7 +424,13 @@ background-color: #FFFFFF;
   display: flex;
 }
 
+.inner-header {
+  padding-top: 35px;
+}
+
 .inner-header-title {
+  margin-top: 0;
+  margin-bottom: 5px;
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
@@ -349,7 +438,16 @@ background-color: #FFFFFF;
 }
 
 /* Хлебные крошки */
+
+.breadcrumbs-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .breadcrumbs-item {
+  margin-right: 26px;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
@@ -358,6 +456,15 @@ background-color: #FFFFFF;
 
 /* Выбор гостиниц с фильтрами */
 /* Инфраструктура */
+.hotels-filter {
+  display: flex;
+   margin-top: 45px;
+}
+
+.hotels-filter-group {
+  margin-right: 67px;
+}
+
 .hotels-filter-title {
   width: 150px;
   font-size: 20px;
@@ -368,9 +475,14 @@ background-color: #FFFFFF;
 
 .hotels-filter-list {
   padding-left: 0px;
+  list-style-type: none;
 }
 
 /* Тип жилья */
+.catalog-filter-group {
+  margin-right: 535px;
+}
+
 .catalog-filter-title {
   font-size: 20px;
   line-height: 26px;
@@ -383,6 +495,13 @@ background-color: #FFFFFF;
   line-height: 23px;
   font-weight: 400;
   color: #FFFFFF;
+}
+
+/* Меняем расположение кнопок */
+.hotels-buttons {
+  display: flex;
+  flex-direction: column;
+  padding-top: 34px;
 }
 
 /* Кнопка - применить */
@@ -399,6 +518,7 @@ background-color: #FFFFFF;
 
 /* Кнопка - сбросить */
 .button-button-reset {
+  margin-bottom: 83px;
   font-family: inherit;
   font-size: 18px;
   line-height: 23px;
@@ -407,7 +527,15 @@ background-color: #FFFFFF;
 }
 
 /* Сортировка гостиниц */
+
+.sorting-container {
+  display: flex;
+  padding: 44px 72px 53px 72px;
+  margin-bottom: 53px;
+}
+
 .select-description {
+  margin-right: 192px;
   font-size: 30px;
   line-height: 39px;
   font-weight: 700;
@@ -422,6 +550,21 @@ background-color: #FFFFFF;
   color: #333333;
 }
 
+/* Кнопки выбора вида */
+.view-selection {
+  display: flex;
+  margin-left: 81px;
+  margin-right: 8px;
+  width: 48px;
+  height: 48px;
+}
+
+.hotel-list {
+  list-style-type: none;
+  margin: 0px 72px 30px 72px;
+  padding: 0;
+}
+
 .hotel-card-link {
   text-decoration: none;
 }
@@ -434,6 +577,7 @@ background-color: #FFFFFF;
 }
 
 .hotel-card {
+  margin-right: 18px;
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
@@ -489,6 +633,9 @@ background-color: #FFFFFF;
 
 /* Загрузить еще */
 .button-load {
+  padding: 17px 290px;
+  margin-left: 218px;
+  margin-right: 218px;
   font-family: inherit;
   font-size: 20px;
   line-height: 26px;
@@ -500,24 +647,59 @@ background-color: #FFFFFF;
 }
 
 /* Пагинация */
+.pagination-container {
+  display: flex;
+  margin-left: 72px;
+  margin-right: 72px;
+  margin-top: 60px;
+  margin-bottom: 73px;
+}
+
+.pagination {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.pagination-link {
+  display: block;
+  box-sizing: border-box;
+  margin-right: 8px;
+  width:55px;
+  min-height: 55px;
+  padding: 15px 15px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #83B3D3;
+  text-decoration: none;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
+}
+
+.pagination-current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
 .hotel-page {
+  margin-left: auto;
+  width: 386px;
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
   color: #333333;
 }
 
-.pagination-link {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 700;
-  color: #ffffff;
-  background-color: #83B3D3;
-}
-
-.pagination-current {
-  color: #000000;
-  background-color: #F2F2F2;
+.select-number-page {
+  width: 160px;
+  margin-left: 51px;
+  height: 48px;
 }
 
 /* Подписка каталога */

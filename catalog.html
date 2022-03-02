@@ -68,7 +68,7 @@
               </ul>
             </header>
             <!-- Выбор гостиниц с фильтрами -->
-            <h2 class="visually-hidden" hidden>Выбор гостиниц с фильтрами</h2>
+            <h2 class="visually-hidden">Выбор гостиниц с фильтрами</h2>
             <form class="hotels-filter" action="https://echo.htmlacademy.ru/" method="get">
               <!-- Группировка нескольких элементов -->
               <fieldset class="hotels-filter-group">
@@ -124,32 +124,41 @@
                 </ul>
               </fieldset>
               <!-- Панель Стоимость пока не добавляем, будет подробный разбор в 8-ом разделе -->
-              <button class="button-button-submit" type="submit">Применить</button>
-              <button class="button-button-reset" type="reset">Сбросить</button>
+              <div class="hotels-buttons">
+                <button class="button-button-submit" type="submit">Применить</button>
+                <button class="button-button-reset" type="reset">Сбросить</button>
+              </div>
             </form>
           </div>
       
           <!-- Сортировка гостиниц -->
           <section class="sorting">
-            <p class="select-description"><b>Найдено гостиниц: 38</b></p>
-            <select class="select-control" aria-label="Сортировка">
-              <option value="cheap">Сначала дешёвые</option>
-              <option value="expensive">Сначала дорогие</option>
-              <option value="popular">Сначала популярные</option>
-            </select>
-      
-            <!-- Ссылки для выбора вида -->
-            <a href="#" class="button button-active">
-              <span class="visually-hidden">Показать плитку</span>
-            </a>
-            <a class="button" href="#">
-              <span class="visually-hidden">Показать карточку</span>
-            </a>
-            <a class="button" href="#">
-              <span class="visually-hidden">Показать список</span>
-            </a>
-      
+            <div class="sorting-container">
+              <p class="select-description"><b>Найдено гостиниц: 38</b></p>
+              <select class="select-control" aria-label="Сортировка">
+                <option value="cheap">Сначала дешёвые</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="popular">Сначала популярные</option>
+              </select>
+              
+              <!-- Ссылки для выбора вида -->
+              <div class="view-selection">
+                <a href="#" class="button button-active">
+                  <span class="visually-hidden">Показать плитку</span>
+                </a>
+                <a class="button" href="#">
+                  <span class="visually-hidden">Показать карточку</span>
+                </a>
+                <a class="button" href="#">
+                  <span class="visually-hidden">Показать список</span>
+                </a>
+              </div>
+            </div>
+            
             <!-- Гостиницы -->
+            <!-- <div class="hotel-container">
+
+            </div> -->
             <ul class="hotel-list">
               <li class="hotel-card">
                 <a class="hotel-card-link" href="#">
@@ -226,32 +235,34 @@
             <button class="button button-load" type="submit">Загрузить ещё</button>
       
             <!-- Пагинация -->
-            <ul class="pagination">
-              <li class="pagination-item">
-                <a class="pagination-link pagination-current">1</a>
-              </li>
-              <li>
-                <a class="pagination-link" href="#">2</a>
-              </li>
-              <li>
-                <a class="pagination-link" href="#">3</a>
-              </li>
-              <li>
-                <a class="pagination-link" href="#">4</a>
-              </li>
-              <li>
-                <a class="pagination-link" href="#">...</a>
-              </li>
-              <li>
-                <a class="pagination-link" href="#">10</a>
-              </li>
-            </ul>
-            <div class="hotel-page">Гостиниц на странице:
-              <select class="select-number-page" aria-label="Сортировка">
-                <option value="four">4</option>
-                <option value="six">6</option>
-                <option value="eight">8</option>
-              </select>
+            <div class="pagination-container">
+              <ul class="pagination">
+                <li class="pagination-item">
+                  <a class="pagination-link pagination-current">1</a>
+                </li>
+                <li>
+                  <a class="pagination-link" href="#">2</a>
+                </li>
+                <li>
+                  <a class="pagination-link" href="#">3</a>
+                </li>
+                <li>
+                  <a class="pagination-link" href="#">4</a>
+                </li>
+                <li>
+                  <a class="pagination-link" href="#">...</a>
+                </li>
+                <li>
+                  <a class="pagination-link" href="#">10</a>
+                </li>
+              </ul>
+              <div class="hotel-page">Гостиниц на странице:
+                <select class="select-number-page" aria-label="Сортировка">
+                  <option value="four">4</option>
+                  <option value="six">6</option>
+                  <option value="eight">8</option>
+                </select>
+              </div>
             </div>
           </section>
       
@@ -271,41 +282,39 @@
       
       <!-- Подвал страницы каталога -->
       <footer class="page-footer">
-        <div class="page-footer-container">
-          <!-- Социальные сети -->
-          <section class="footer-social">
-            <h2 class="visually-hidden">Социальные сети</h2>
-            <ul class="footer-social-list">
-              <li class="footer-social-item">
-                <a class="button" href="https://twitter.com/htmlacademy_ru">
-                  <span class="visually-hidden">Твиттер</span>
-                </a>
-              </li>
-              <li class="footer-social-item">
-                <a class="button" href="https://www.facebook.com/htmlacademy">
-                  <span class="visually-hidden">Фейсбук</span>
-                </a>
-              </li>
-              <li class="footer-social-item">
-                <a class="button" href="https://www.youtube.com/c/HTMLAcademyRUS">
-                  <span class="visually-hidden">Ютуб</span>
-                </a>
-              </li>
-            </ul>
-          </section>
-          <!-- Контакт -->
-          <div class="footer-contact">
-            <span class="visually-hidden">Контакт</span>
-            <address class="footer-contact-address">
-              <a class="footer-contact-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
-            </address>
-          </div>
-          <!-- Логотип htmlacademy-->
-          <div class="footer-logo">
-            <a class="footer-contact-logo" href="https://htmlacademy.ru">
-              <img src="images/logos/logo_htmlacademy.svg" width="115" height="34" alt="Логотип htmlacademy.">
-            </a>
-          </div>
+        <!-- Социальные сети -->
+        <section class="footer-social">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="button" href="https://twitter.com/htmlacademy_ru">
+                <span class="visually-hidden">Твиттер</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="button" href="https://www.facebook.com/htmlacademy">
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="button" href="https://www.youtube.com/c/HTMLAcademyRUS">
+                <span class="visually-hidden">Ютуб</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- Контакт -->
+        <div class="footer-contact">
+          <span class="visually-hidden">Контакт</span>
+          <address class="footer-contact-address">
+            <a class="footer-contact-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
+          </address>
+        </div>
+        <!-- Логотип htmlacademy-->
+        <div class="footer-logo">
+          <a class="footer-contact-logo" href="https://htmlacademy.ru">
+            <img src="images/logos/logo_htmlacademy.svg" width="115" height="34" alt="Логотип htmlacademy.">
+          </a>
         </div>
       </footer>
     </div>
