@@ -559,7 +559,11 @@ background-color: #FFFFFF;
   height: 48px;
 }
 
+/* Каталог на гридах */
 .hotel-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 10px 18px;
   list-style-type: none;
   margin: 0px 72px 30px 72px;
   padding: 0;
@@ -576,12 +580,28 @@ background-color: #FFFFFF;
   color: #000000;
 }
 
+/* Карточки каталога */
 .hotel-card {
-  margin-right: 18px;
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
   color: #333333;
+  margin: 20px;
+}
+
+/* Карточки каталога на гридах */
+.hotel-card-type-container {
+  display: grid;
+  grid-template-columns: 137px 137px;
+  justify-items: start;
+  gap: 16px 26px;
+}
+
+/* Звездность отличается, поэтому сделал отдельно и на флексах (для отступа сверху) */
+.stars-container {
+  display: flex;
+  margin-top: 16px;
+  justify-content: space-between;
 }
 
 /* Подробнее */
@@ -594,6 +614,8 @@ background-color: #FFFFFF;
   background-color: #756257;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
+  width: 137px;
 }
 
 /* В избранное */
@@ -606,6 +628,8 @@ background-color: #FFFFFF;
   background-color: #83B3D3;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
+  width: 137px;
 }
 
 .button-infavorites {
@@ -629,6 +653,8 @@ background-color: #FFFFFF;
   background-color: #F2F2F2;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
+  width: 160px;
 }
 
 /* Загрузить еще */
@@ -689,7 +715,7 @@ background-color: #FFFFFF;
 
 .hotel-page {
   margin-left: auto;
-  width: 386px;
+  /* width: 386px; пока убрал, т.к. вид не соответствует макету*/ 
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
