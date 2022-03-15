@@ -57,6 +57,7 @@ body {
   display: flex;
   padding-left: 70px;
   padding-right: 70px;
+  align-items: center;
 }
 
 /* Левая часть навигации */
@@ -64,7 +65,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
-  width: 460px;
   list-style-type: none;
 }
 
@@ -80,18 +80,19 @@ body {
 
 /* Текст навигации */
 .navigation-link {
-  margin-top: 20px;
   margin-right: 34px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
   background-color: #FFFFFF;
-  text-align: center;
   text-decoration: none;
 }
 
-.navigation-list .navigation-user {
+.navigation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 18px;
   min-height: 18px;
 }
@@ -99,14 +100,13 @@ body {
 /* Ссылка в виде кнопки */
 .navigation-button {
   display: block;
-  margin-top: 14px;
-  margin-bottom: 14px;
-  margin-right: 70px;
-  padding: 9px 15px;
+  width: 160px;
+  padding: 9px 15px 8px 15px;
   line-height: 20px;
   font-weight: 700;
   color: #FFFFFF;
   background-color: #756257;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -161,7 +161,8 @@ body {
 }
 
 .advantages-description {
-  padding: 63px 240px 147px 240px;
+  margin: 0;
+  padding: 63px 240px 31px 240px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -171,7 +172,8 @@ body {
 }
 
 .advantages-title {
-  padding: 31px 240px 80px 240px;
+  margin: 0;
+  padding: 0px 240px 80px 240px;
   font-size: 22px;
   line-height: 36px;
   font-weight: 400;
@@ -254,6 +256,22 @@ body {
 .service-item {
   width: 400px;
   background-color: rgba(131, 179, 211, 0.12);
+  background-image: url('../images/icons/icon-1.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 85px;
+/* не понял как задать точное расположение иконки */
+}
+
+.service-item:nth-child(2) {
+  background-image: url('../images/icons/icon-2.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 85px;
+}
+
+.service-item:nth-child(3) {
+  background-image: url('../images/icons/icon-3.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 85px;
 }
 
 .service-item-title {
@@ -312,6 +330,8 @@ background-color: #FFFFFF;
   background-color: #756257;
   text-decoration: none;
   text-transform: uppercase;
+  padding: 15px 150px 15px 150px;
+  /* паддинги слева и справа по макету не измерить, поэтому указал примерно */
 }
 
 /* Подписка */
@@ -355,10 +375,30 @@ background-color: #FFFFFF;
   text-transform: uppercase;
 }
 
+.subscription-form {
+  display: flex;
+}
+
+.field {
+  width: 600px;
+  height: 60px;
+  border: 0;
+  padding: 0px 0px 0px 22px;
+}
+
+.subscription-button {
+  width: 200px;
+  height: 60px;
+  margin: 0;
+  border: 0;
+  text-align: center;
+}
+
 /* Подвал сайта */
 .page-footer {
    display: flex;
   flex-wrap: wrap;
+  
   background-color: #ffffff;
   padding-left: 72px;
   padding-right: 72px;
@@ -372,14 +412,18 @@ background-color: #FFFFFF;
   display: flex;
   margin: 0;
   padding: 0;
+  justify-content: center;
+  align-items: center;
   list-style-type: none;
   width: 120px;
 }
 
 .footer-social-item {
+  position: relative;
   width: 20px;
-  height: 18px;
+  height: 20px;
   margin-right: 30px;
+  margin-top: 49px;
 }
 
 .footer-social-item:nth-child(3n) {
