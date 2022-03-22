@@ -95,12 +95,11 @@ body {
 }
 
 /* Активная */
-/* Не понял как сделать */
 .navigation-link-text-current::before {
   position: absolute;
-  right: 34px;
-  bottom: 20px;
-  height: 3px;
+  top: 83px;
+  width: 70px;
+  height: 2px;
   background-color: #756257;
   content: "";
 }
@@ -451,7 +450,7 @@ background-color: #FFFFFF;
 }
 /* Ошибка */
 .field:active {
-  box-shadow: inset 0 0 0 3px #FF5757;
+  box-shadow: inset 0 0 0 2px #FF5757;
 }
 
 /* Состояние для подписаться */
@@ -468,7 +467,6 @@ background-color: #FFFFFF;
 .page-footer {
   display: flex;
   flex-wrap: wrap;
-  height: 120px;
   background-color: #ffffff;
   padding-left: 72px;
   padding-right: 72px;
@@ -562,6 +560,15 @@ color: #756257;
 
 /* catalog.html */
 
+.navigation-link-text-catalog-current::before {
+  position: absolute;
+  top: 83px;
+  width: 93px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
+}
+
 .main-inner {
   color: #000000;
   background-color: #FFFFFF;
@@ -607,12 +614,23 @@ color: #756257;
   color: #FFFFFF;
 }
 
+.breadcrumbs-item:first-child::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 8px;
+  background-image: url(../images/arrow.svg);
+}
+
+.breadcrumbs-link {
+  padding: 3px 8px 6px 8px;
+}
+
 /* Состояния для хлебных крошек */
-/* Для svg не понял, писал как и для главной страницы */
 /* Наведение */
 .breadcrumbs-link:hover {
-  /* в стайлгайде визуально цвет серый, а прописан белый (?) */
   color: #FFFFFF;
+  opacity: 60%;
 }
 /* Фокус */
 /* Не работает */
@@ -714,6 +732,8 @@ color: #756257;
   margin-top: 20px;
   border: none;
   cursor: pointer;
+  width: 100px;
+  height: 32px;
   margin-bottom: 83px;
   font-family: inherit;
   font-size: 18px;
@@ -722,19 +742,19 @@ color: #756257;
   color: #FFFFFF;
   background-color: #11ffee00;
   text-align: center;
+  align-self: center;
 }
 
 /* Состояния для сбросить */
 /* Наведение */
 .button-button-reset:hover {
-  /* в стайлгайде визуально цвет серый, а прописан белый (?) */
   color: #FFFFFF;
+  opacity: 60%;
 }
 /* Фокус */
 .button-button-reset:focus {
   box-shadow: inset 0 0 0 3px #83B3D3;
   border-radius: 4px;
-  /* при фокусировке получается большая рамка (?) */
 }
 
 /* Сортировка гостиниц */
@@ -760,12 +780,12 @@ color: #756257;
 /* Состояния для сортировки */
 /* Наведение */
 .select-control:hover {
-  box-shadow: inset 0 0 0 3px #83B3D3;
+  box-shadow: inset 0 0 0 2px #83B3D3;
 }
 
 /* Фокус */
 .select-control:focus {
-  box-shadow: inset 0 0 0 3px #83B3D3;
+  box-shadow: inset 0 0 0 2px #83B3D3;
 }
 
 
@@ -782,8 +802,7 @@ color: #756257;
   width: 48px;
   height: 48px;
   margin-right: 8px;
-  /* толщину рамки не нашел на макете, подобрал визуально (на макете есть 2рх, но это не похоже на толщину) */
-  border: 3px solid #E6E6E6;
+  border: 2px solid #E6E6E6;
   cursor: pointer;
   border-radius: 4px;
 }
@@ -795,18 +814,18 @@ color: #756257;
   width: 48px;
   height: 48px;
   margin-right: 8px;
-  border: 3px solid #000000;
+  border: 2px solid #000000;
   border-radius: 4px;
 }
 
 /* Состояния для переключателя */
 /* Наведение */
 .button-toggle:hover {
-  box-shadow: inset 0 0 0 3px #83B3D3;
+  box-shadow: inset 0 0 0 2px #83B3D3;
 }
 /* Фокус */
 .button-toggle:focus {
-  box-shadow: inset 0 0 0 3px #83B3D3;
+  box-shadow: inset 0 0 0 2px #83B3D3;
 }
 
 .select-description {
@@ -1144,5 +1163,5 @@ color: #756257;
 }
 /* Ошибка */
 .catalog-field:active {
-  box-shadow: inset 0 0 0 3px #FF5757;
+  box-shadow: inset 0 0 0 2px #FF5757;
 }
