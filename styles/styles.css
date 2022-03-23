@@ -79,7 +79,7 @@ body {
 }
 
 /* Текст навигации */
-.navigation-link {
+.navigation-link-text {
   margin-right: 34px;
   font-size: 20px;
   line-height: 26px;
@@ -89,12 +89,27 @@ body {
   text-decoration: none;
 }
 
-.navigation-container {
+/* Наведение на текст */
+.navigation-link-text:hover {
+  color: #756257;
+}
+
+/* Активная */
+.navigation-link-text-current::before {
+  position: absolute;
+  top: 83px;
+  width: 70px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
+}
+
+.navigation-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 18px;
-  min-height: 18px;
+  width: 40px;
+  height: 40px;
 }
 
 /* Ссылка в виде кнопки */
@@ -102,6 +117,7 @@ body {
   display: block;
   width: 160px;
   padding: 9px 15px 8px 15px;
+  margin-left: 20px;
   line-height: 20px;
   font-weight: 700;
   color: #FFFFFF;
@@ -109,10 +125,23 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 4px;
 }
 
-.main-container {
-  /* flex-grow: 1; */
+/* Наведение */
+.navigation-button:hover {
+  background-color: #615048;
+}
+
+/* Фокус */
+.navigation-button:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
+}
+
+/* Наведение на иконку */
+/* Сделал по примеру в демо, не работает (?) */
+.navigation-link:hover .navigation-icon {
+fill: #756257;
 }
 
 /* Надпись по центру */
@@ -331,20 +360,30 @@ background-color: #FFFFFF;
   text-decoration: none;
   text-transform: uppercase;
   padding: 15px 150px 15px 150px;
-  /* паддинги слева и справа по макету не измерить, поэтому указал примерно */
+  border-radius: 10px;
+}
+
+/* Наведение */
+.button-search:hover {
+  background-color: #615048;
+}
+
+/* Фокус */
+.button-search:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
 }
 
 /* Подписка */
 .subscription-index {
   padding: 94px 200px;
+  margin: 0;
   background-image: url("../images/background.jpg");
   background-size: 1200px 411px;
   color: #000000;
   background-color: #F2F2F2;
-  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
-  padding-bottom: 100px;
 }
 
 .subscription-signature {
@@ -357,7 +396,7 @@ background-color: #FFFFFF;
 
 .subscription-description {
   margin-top: 29px;
-  margin-bottom: 46px;
+  margin-bottom: 56px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
@@ -384,6 +423,9 @@ background-color: #FFFFFF;
   height: 60px;
   border: 0;
   padding: 0px 0px 0px 22px;
+  background-color: #F2F2F2;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .subscription-button {
@@ -392,13 +434,39 @@ background-color: #FFFFFF;
   margin: 0;
   border: 0;
   text-align: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Плейсхолдер */
+/* Наведение */
+.field:hover {
+  background-color: #E6E6E6;
+}
+/* Фокус */
+.field:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  outline: none;
+}
+/* Ошибка */
+.field:active {
+  box-shadow: inset 0 0 0 2px #FF5757;
+}
+
+/* Состояние для подписаться */
+/* Наведение */
+.subscription-button:hover {
+  background-color: #68A2CA;
+}
+/* Фокус */
+.subscription-button:focus {
+  box-shadow: inset 0 0 0 3px #756257;
 }
 
 /* Подвал сайта */
 .page-footer {
-   display: flex;
+  display: flex;
   flex-wrap: wrap;
-  
   background-color: #ffffff;
   padding-left: 72px;
   padding-right: 72px;
@@ -410,24 +478,39 @@ background-color: #FFFFFF;
 
 .footer-social-list {
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
-  justify-content: center;
-  align-items: center;
   list-style-type: none;
-  width: 120px;
 }
 
 .footer-social-item {
   position: relative;
-  width: 20px;
-  height: 20px;
-  margin-right: 30px;
   margin-top: 49px;
+}
+
+.footer-social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
 }
 
 .footer-social-item:nth-child(3n) {
   margin-right: 0;
+}
+
+/* Состояние для иконок */
+/* Наведение */
+/* Сделал по примеру демо, как и в навигации не работает (?) */
+.footer-social-button:hover .social-icon {
+  fill: #68A2CA;
+}
+/* Фокус */
+.footer-social-button:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  border-radius: 10px;
 }
 
 .footer-contact {
@@ -445,11 +528,46 @@ background-color: #FFFFFF;
   text-decoration: none;
 }
 
+/* Состояние для контакта */
+/* Наведение */
+.footer-contact-phone:hover {
+color: #756257;
+}
+/* Фокус */
+.footer-contact-phone:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  border-radius: 10px;
+}
+
 .footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 42px;
 }
 
+/* Состояние для логотипа */
+/* Наведение */
+/* Также не понял как это работает для изображения (?) */
+.footer-contact-logo:hover {
+  color: #756257;
+}
+/* Фокус */
+.footer-contakt-logo:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  border-radius: 10px;
+}
+
 /* catalog.html */
+
+.navigation-link-text-catalog-current::before {
+  position: absolute;
+  top: 83px;
+  width: 93px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
+}
 
 .main-inner {
   color: #000000;
@@ -459,6 +577,7 @@ background-color: #FFFFFF;
 .inner-background {
   padding-left: 72px;
   padding-right: 72px;
+  padding-top: 35px;
   background-image: url(../images/catalog-background.jpg);
   background-size: 1200px 408px;
   background-repeat: no-repeat;
@@ -466,10 +585,6 @@ background-color: #FFFFFF;
 
 .hotels-filter {
   display: flex;
-}
-
-.inner-header {
-  padding-top: 35px;
 }
 
 .inner-header-title {
@@ -487,30 +602,59 @@ background-color: #FFFFFF;
   display: flex;
   margin: 0;
   padding: 0;
+  margin-bottom: 45px;
   list-style-type: none;
 }
 
 .breadcrumbs-item {
-  margin-right: 26px;
+  margin-right: 10px;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
   color: #FFFFFF;
 }
 
+.breadcrumbs-item:first-child::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 8px;
+  background-image: url(../images/arrow.svg);
+}
+
+.breadcrumbs-link {
+  padding: 3px 8px 6px 8px;
+}
+
+/* Состояния для хлебных крошек */
+/* Наведение */
+.breadcrumbs-link:hover {
+  color: #FFFFFF;
+  opacity: 60%;
+}
+/* Фокус */
+/* Не работает */
+.breadcrumbs-link:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  border-radius: 4px;
+}
+
 /* Выбор гостиниц с фильтрами */
 /* Инфраструктура */
 .hotels-filter {
   display: flex;
-   margin-top: 45px;
 }
 
 .hotels-filter-group {
   margin-right: 67px;
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
 .hotels-filter-title {
   width: 150px;
+  margin-bottom: 30px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -519,15 +663,18 @@ background-color: #FFFFFF;
 
 .hotels-filter-list {
   padding-left: 0px;
+  margin: 0;
   list-style-type: none;
 }
 
 /* Тип жилья */
 .catalog-filter-group {
-  margin-right: 535px;
+  /* margin-right: 535px; */
+  border: none;
 }
 
 .catalog-filter-title {
+  margin-bottom: 30px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -535,6 +682,8 @@ background-color: #FFFFFF;
 }
 
 .hotels-filter-item {
+  margin-top: 0;
+  margin-bottom: 16px;
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
@@ -545,11 +694,17 @@ background-color: #FFFFFF;
 .hotels-buttons {
   display: flex;
   flex-direction: column;
-  padding-top: 34px;
+  margin-left: auto;
+  padding-top: 64px;
 }
 
 /* Кнопка - применить */
 .button-button-submit {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  width: 160px;
+  height: 48px;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -558,16 +713,48 @@ background-color: #FFFFFF;
   background-color: #83B3D3;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 4px;
+}
+
+/* Состояния для применить */
+/* Наведение */
+.button-button-submit:hover {
+  background-color: #68A2CA;
+}
+/* Фокус */
+.button-button-submit:focus {
+  box-shadow: inset 0 0 0 3px #FFFFFF;
 }
 
 /* Кнопка - сбросить */
 .button-button-reset {
+  padding: 0;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  height: 32px;
   margin-bottom: 83px;
   font-family: inherit;
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
   color: #FFFFFF;
+  background-color: #11ffee00;
+  text-align: center;
+  align-self: center;
+}
+
+/* Состояния для сбросить */
+/* Наведение */
+.button-button-reset:hover {
+  color: #FFFFFF;
+  opacity: 60%;
+}
+/* Фокус */
+.button-button-reset:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  border-radius: 4px;
 }
 
 /* Сортировка гостиниц */
@@ -575,32 +762,80 @@ background-color: #FFFFFF;
 .sorting-container {
   display: flex;
   padding: 44px 72px 53px 72px;
-  margin-bottom: 53px;
-}
-
-.select-description {
-  margin-right: 192px;
-  font-size: 30px;
-  line-height: 39px;
-  font-weight: 700;
-  color: #000000;
-  text-transform: uppercase;
 }
 
 .select-control {
+  /* не понял, почему данная вкладка в 2 строки (что на нее влияет?) */
+  width: 287px;
+  height: 48px;
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
   color: #333333;
+  border: none;
+  box-shadow: inset 0 0 0 3px #E6E6E6;
+  border-radius: 4px;
 }
+
+/* Состояния для сортировки */
+/* Наведение */
+.select-control:hover {
+  box-shadow: inset 0 0 0 2px #83B3D3;
+}
+
+/* Фокус */
+.select-control:focus {
+  box-shadow: inset 0 0 0 2px #83B3D3;
+}
+
 
 /* Кнопки выбора вида */
 .view-selection {
   display: flex;
   margin-left: 81px;
-  margin-right: 8px;
+}
+
+.button-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 48px;
   height: 48px;
+  margin-right: 8px;
+  border: 2px solid #E6E6E6;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button-toggle-current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+
+/* Состояния для переключателя */
+/* Наведение */
+.button-toggle:hover {
+  box-shadow: inset 0 0 0 2px #83B3D3;
+}
+/* Фокус */
+.button-toggle:focus {
+  box-shadow: inset 0 0 0 2px #83B3D3;
+}
+
+.select-description {
+  margin-right: auto;
+  padding: 0;
+  font-size: 30px;
+  line-height: 39px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
 }
 
 /* Каталог на гридах */
@@ -648,8 +883,40 @@ background-color: #FFFFFF;
   justify-content: space-between;
 }
 
+.stars-four {
+  padding: 10px 0;
+  width: 92px;
+  height: 17px;
+  background-image: url(../images/star.svg);
+  background-repeat: repeat-x;
+  background-size: 25px 17px;
+  background-position: -4px center;
+}
+
+.stars-three {
+  padding: 10px 0;
+  width: 67px;
+  height: 17px;
+  background-image: url(../images/star.svg);
+  background-repeat: repeat-x;
+  background-size: 25px 17px;
+  background-position: -4px center;
+}
+
+.stars-two {
+  padding: 10px 0;
+  width: 42px;
+  height: 17px;
+  background-image: url(../images/star.svg);
+  background-repeat: repeat-x;
+  background-size: 25px 17px;
+  background-position: -4px center;
+}
+
 /* Подробнее */
 .button-more {
+  padding-top: 9px;
+  padding-bottom: 10px;
   font-family: inherit;
   font-size: 16px;
   line-height: 21px;
@@ -660,10 +927,23 @@ background-color: #FFFFFF;
   text-transform: uppercase;
   text-align: center;
   width: 137px;
+  border-radius: 4px;
+}
+
+/* Состояние для подробнее*/
+/* Наведение */
+.button-more:hover {
+  background-color: #615048;
+}
+/* Фокус */
+.button-more:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
 }
 
 /* В избранное */
 .button-favorites {
+  padding-top: 9px;
+  padding-bottom: 10px;
   font-family: inherit;
   font-size: 16px;
   line-height: 21px;
@@ -674,9 +954,22 @@ background-color: #FFFFFF;
   text-transform: uppercase;
   text-align: center;
   width: 137px;
+  border-radius: 4px;
+}
+
+/* Состояние для избранное*/
+/* Наведение */
+.button-favorites:hover {
+  background-color: #68A2CA;
+}
+/* Фокус */
+.button-favorites:focus {
+  box-shadow: inset 0 0 0 3px #756257;
 }
 
 .button-infavorites {
+  padding-top: 9px;
+  padding-bottom: 10px;
   font-family: inherit;
   font-size: 16px;
   line-height: 21px;
@@ -685,10 +978,25 @@ background-color: #FFFFFF;
   background-color: #7DB54F;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
+  width: 137px;
+  border-radius: 4px;
+}
+
+/* Состояние для в избранном*/
+/* Наведение */
+.button-infavorites:hover {
+  background-color: #6C9E42;
+}
+/* Фокус */
+.button-infavorites:focus {
+  box-shadow: inset 0 0 0 3px #756257;
 }
 
 /* Рейтинг */
 .rating {
+  padding-top: 9px;
+  padding-bottom: 10px;
   font-family: inherit;
   font-size: 16px;
   line-height: 21px;
@@ -699,6 +1007,7 @@ background-color: #FFFFFF;
   text-transform: uppercase;
   text-align: center;
   width: 160px;
+  border-radius: 4px;
 }
 
 /* Загрузить еще */
@@ -714,6 +1023,8 @@ background-color: #FFFFFF;
   background-color: #83B3D3;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 4px;
+  border: none;
 }
 
 /* Пагинация */
@@ -746,6 +1057,18 @@ background-color: #FFFFFF;
   color: #ffffff;
   background-color: #83B3D3;
   text-decoration: none;
+  border-radius: 4px;
+}
+
+/* Состояния для пагинации */
+/* Наведение */
+.pagination-link:hover {
+  background-color: #68A2CA;
+}
+
+/* Фокус */
+.pagination-link:focus {
+  box-shadow: inset 0 0 0 3px #756257;
 }
 
 .pagination-item:last-child {
@@ -770,17 +1093,24 @@ background-color: #FFFFFF;
   width: 160px;
   margin-left: 51px;
   height: 48px;
+  border-radius: 4px;
 }
 
 /* Подписка каталога */
 .subscription-catalog {
+  padding: 0px 200px;
+  margin: 0;
   background-size: 1200px 411px;
   color: #000000;
   background-color: #ffffff;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
-  padding-bottom: 100px;
+  padding-bottom: 140px;
+}
+
+.subscription-catalog-form {
+  display: flex;
 }
 
 .subscription-catalog-signature {
@@ -792,8 +1122,46 @@ background-color: #FFFFFF;
 }
 
 .subscription-catalog-description {
+  margin-top: 46px;
+  margin-bottom: 46px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
   color: #333333;
+}
+
+.catalog-field {
+  width: 600px;
+  height: 60px;
+  border: 0;
+  background-color: #F2F2F2;
+  padding: 0px 0px 0px 22px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.subscription-button {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Плейсхолдер */
+/* Наведение */
+.catalog-field:hover {
+  background-color: #E6E6E6;
+}
+/* Фокус */
+.catalog-field:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  outline: none;
+}
+/* Ошибка */
+.catalog-field:active {
+  box-shadow: inset 0 0 0 2px #FF5757;
 }
